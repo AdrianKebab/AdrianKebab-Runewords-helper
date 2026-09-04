@@ -72,20 +72,20 @@ public class MainViewModel
 
             // Triad runewords
             new Runeword {Name = "Deep Wounds", Runes = new List<Rune> {GetRune("BOR"), GetRune("KLY"), GetRune("ZER")}, Effects = "Bleed applies on bleed resistant enemies."},
-            new Runeword {Name = "Magic Spread", Runes = new List<Rune> {GetRune("CIM"), GetRune("DOL"), GetRune("SIV")}, Effects = "Poison attacks apply vulnerability."},
-            new Runeword {Name = "Darkness", Runes = new List<Rune> {GetRune("CIM"), GetRune("MON"), GetRune("SAK")}, Effects = "Increases ABILITY POWER by x% for each enemy (Varies depending on RuneLvls)"},
-            new Runeword {Name = "Soul Healing", Runes = new List<Rune> {GetRune("COS"), GetRune("DOS"), GetRune("ODO")}, Effects = "Improves critical shadow damage (Varies depending on RuneLvls)"},
-            new Runeword {Name = "Arms", Runes = new List<Rune> {GetRune("COS"), GetRune("SIL"), GetRune("VIN")}, Effects = "Healing damage restores mana (Varies depending on RuneLvls)"},
+            new Runeword {Name = "Venom", Runes = new List<Rune> {GetRune("BOR"), GetRune("SAK"), GetRune("TRU")}, Effects = "Poison attacks apply vulnerability."},
+            new Runeword {Name = "Magic Spread", Runes = new List<Rune> {GetRune("CIM"), GetRune("DOL"), GetRune("SIV")}, Effects = "Increases ABILITY POWER by x% for each enemy (Varies depending on RuneLvls)"},
+            new Runeword {Name = "Darkness", Runes = new List<Rune> {GetRune("CIM"), GetRune("MON"), GetRune("SAK")}, Effects = "Improves critical shadow damage (Varies depending on RuneLvls)"},
+            new Runeword {Name = "Soul", Runes = new List<Rune> {GetRune("COS"), GetRune("DOS"), GetRune("ODO")}, Effects = "Healing damage restores mana (Varies depending on RuneLvls)"},
             new Runeword {Name = "Mind", Runes = new List<Rune> {GetRune("COS"), GetRune("MON"), GetRune("VIN")}, Effects = "(Mind * No stacked effect) Staves have 1 additional attack"},
-            new Runeword {Name = "Eyes", Runes = new List<Rune> {GetRune("COS"), GetRune("VIN"), GetRune("ZER")}, Effects = "(Arms * No stacked effect) Swords have 1 additional attack"},
-            new Runeword {Name = "Magic Aura", Runes = new List<Rune> {GetRune("DOS"), GetRune("MON"), GetRune("ZOB")}, Effects = "(Eyes * No stacked effect) Bows have 1 additional attack"},
-            new Runeword {Name = "Holy Right", Runes = new List<Rune> {GetRune("KRA"), GetRune("SIV"), GetRune("VIN")}, Effects = "AP increases by an amount per armor."},
-            new Runeword {Name = "Of the Fittest", Runes = new List<Rune> {GetRune("MON"), GetRune("SIL"), GetRune("ZER")}, Effects = "x% chance to recast a talent (Varies depending on RuneLvls)"},
-            new Runeword {Name = "Vigor", Runes = new List<Rune> {GetRune("ODO"), GetRune("PYD"), GetRune("ZOB")}, Effects = "Holy Spells have a chance to reset their cooldowns after use. (Varies depending on RuneLvls)"},
-            new Runeword {Name = "Protection", Runes = new List<Rune> {GetRune("PYD"), GetRune("SAK"), GetRune("ZOB")}, Effects = "Increases maximum health (Varies depending on RuneLvls)"},
-            new Runeword {Name = "Venom", Runes = new List<Rune> {GetRune("BOR"), GetRune("SAK"), GetRune("TRU")}, Effects = "Positive effects last more turns (Varies depending on RuneLvls)"},
-            new Runeword {Name = "Mastermind", Runes = new List<Rune> {GetRune("DOS"), GetRune("MON"), GetRune("ZOL")}, Effects = "Fireball and Smite are considered Curses"},
-            new Runeword {Name = "Cursed", Runes = new List<Rune> {GetRune("OGI"), GetRune("CIM"), GetRune("SIV")}, Effects = "Chance to gain protection for 5 turns when entering a room (Varies depending on RuneLvls)"}
+            new Runeword {Name = "Arms", Runes = new List<Rune> {GetRune("COS"), GetRune("SIL"), GetRune("VIN")}, Effects = "(Arms * No stacked effect) Swords have 1 additional attack"},
+            new Runeword {Name = "Eyes", Runes = new List<Rune> {GetRune("COS"), GetRune("VIN"), GetRune("ZER")}, Effects = "(Eyes * No stacked effect) Bows have 1 additional attack"},
+            new Runeword {Name = "Magic Aura", Runes = new List<Rune> {GetRune("DOS"), GetRune("MON"), GetRune("ZOB")}, Effects = "AP increases by an amount per armor."},
+            new Runeword {Name = "Mastermind", Runes = new List<Rune> {GetRune("DOS"), GetRune("MON"), GetRune("ZOL")}, Effects = "x% chance to recast a talent (Varies depending on RuneLvls)"},
+            new Runeword {Name = "Holy Right", Runes = new List<Rune> {GetRune("KRA"), GetRune("SIV"), GetRune("VIN")}, Effects = "Holy Spells have a chance to reset their cooldowns after use. (Varies depending on RuneLvls)"},
+            new Runeword {Name = "Of the Fittest", Runes = new List<Rune> {GetRune("MON"), GetRune("SIL"), GetRune("ZER")}, Effects = "Increases maximum health (Varies depending on RuneLvls)"},
+            new Runeword {Name = "Vigor", Runes = new List<Rune> {GetRune("ODO"), GetRune("PYD"), GetRune("ZOB")}, Effects = "Positive effects last more turns (Varies depending on RuneLvls)"},
+            new Runeword {Name = "Cursed", Runes = new List<Rune> {GetRune("OGI"), GetRune("CIM"), GetRune("SIV")}, Effects = "Fireball and Smite are considered Curses"},
+            new Runeword {Name = "Protection", Runes = new List<Rune> {GetRune("PYD"), GetRune("SAK"), GetRune("ZOB")}, Effects = "Chance to gain protection for 5 turns when entering a room (Varies depending on RuneLvls)"}
         };
 
         foreach (var runeword in runewords)
@@ -96,9 +96,9 @@ public class MainViewModel
 
     private Rune GetRune(string name)
     {
-        var rune = AllRunes.FirstOrDefault(r => r.Name == name) 
+        var rune = AllRunes.FirstOrDefault(r => r.Name == name)
         ?? throw new Exception($"Rune '{name}' kunde inte hittas.");
-        
+
         return rune;
     }
 
