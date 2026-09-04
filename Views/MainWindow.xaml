@@ -32,10 +32,11 @@
                                 CommandParameter="{Binding}"
                                 Width="90"
                                 Height="90"
-                                Margin="5">
+                                Margin="5"
+                                Background="#372829">
                                 <StackPanel>
                                     <Image Source="{Binding ImagePath}" Width="45" Height="45"/>
-                                    <TextBlock Text="{Binding Name}" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="{Binding Name}" Foreground="White" HorizontalAlignment="Center"/>
                                 </StackPanel>
                             </Button>
                         </DataTemplate>
@@ -51,7 +52,10 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
-                <ListBox Grid.Row="0" Background="#372829" ItemsSource="{Binding OwnedRunes}">
+                <ListBox Grid.Row="0"
+                    Background="#372829"
+                    BorderThickness="0"
+                    ItemsSource="{Binding OwnedRunes}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Border Margin="5"
@@ -59,29 +63,37 @@
                                 BorderThickness="1"
                                 BorderBrush="Gray"
                                 Background="#372829">
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="60"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="40"/>
-                                    </Grid.ColumnDefinitions>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
 
-                                    <Image Source="{Binding Rune.ImagePath}"
-                                        Width="45"
-                                        Height="45"/>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="30"/>
+                                </Grid.ColumnDefinitions>
 
-                                    <TextBlock Grid.Column="1"
-                                        Text="{Binding Rune.Name}"
-                                        VerticalAlignment="Center"
-                                        FontSize="16"
-                                        Foreground="White"/>
+                                <Image Source="{Binding Rune.ImagePath}"
+                                    Width="45"
+                                    Height="45"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"/>
 
-                                    <TextBlock Grid.Column="2"
-                                        Text="{Binding Amount}"
-                                        VerticalAlignment="Center"
-                                        HorizontalAlignment="Center"
-                                        FontSize="16"
-                                        Foreground="White"/>
+                                <TextBlock Grid.Row="1"
+                                    Text="{Binding Rune.Name}"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    FontSize="16"
+                                    Foreground="White"/>
+
+                                <TextBlock Grid.Row="1"
+                                    Grid.Column="1"
+                                    Text="{Binding Amount}"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    FontSize="16"
+                                    Foreground="White"/>
                                 </Grid>
                             </Border>
                         </DataTemplate>
